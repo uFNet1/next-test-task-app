@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgba(247, 249, 253, 1);
+  --foreground: rgba(18, 18, 18, 1);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: rgba(100, 200, 130, 1);
+  --color-confirmation-background: rgba(210, 61, 61, 1);
+  --color-foreground-secondary: rgba(18, 18, 18, 0.6);
+  --color-foreground-tertiary: rgba(102, 102, 102, 1);
+  --color-foreground-quaternary: rgba(170, 170, 170, 1)
+
+  --color-black: rgba(0, 0, 0, 1);
+  --color-white: rgba(255, 255, 255, 1);
 }
 
 body {
