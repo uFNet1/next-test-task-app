@@ -13,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <nav className="h-full bg-white"></nav>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
