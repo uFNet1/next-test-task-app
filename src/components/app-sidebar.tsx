@@ -13,13 +13,13 @@ import { LayoutDashboard, Settings } from "lucide-react";
 import Image from "next/image";
 
 const items = [
-  { title: "Dashboard", url: "/", icon: LayoutDashboard },
+  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
   { title: "Setting", url: "/setting", icon: Settings },
 ];
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="none">
+    <Sidebar collapsible="none" className="mr-8">
       <SidebarHeader className="mt-12 mb-6">
         <SidebarMenuButton
           asChild

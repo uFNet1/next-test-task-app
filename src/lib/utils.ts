@@ -4,3 +4,23 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+export function parseDate(date: Date) {
+  const day = date.getDay();
+  const month = date.getMonth();
+  return day + " " + months[month];
+}
