@@ -79,8 +79,8 @@
 
   --sidebar: rgba(255, 255, 255, 1);
   --sidebar-foreground: rgba(170, 170, 170, 1);
-  --sidebar-accent: rgba(100, 200, 130, 1);
-  --sidebar-accent-foreground: rgba(255, 255, 255, 1);
+  --sidebar-accent: rgba(255, 255, 255, 1);
+  --sidebar-accent-foreground: rgba(100, 200, 130, 1);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --sidebar-primary: hsl(240 5.9% 10%);

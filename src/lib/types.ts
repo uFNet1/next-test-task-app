@@ -1,3 +1,6 @@
+import { LucideProps } from "lucide-react";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
+
 export interface CardApiData {
   createdAt: string;
   title: string;
@@ -16,4 +19,9 @@ export interface CardDisplayData {
   createdAt: Date;
   title: string;
   description: string;
+}
+export interface SidebarMenuData {
+  title: string;
+  url: string;
+  icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>;
 }

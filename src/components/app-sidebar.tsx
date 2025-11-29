@@ -5,17 +5,10 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
-  SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { LayoutDashboard, Settings } from "lucide-react";
 import Image from "next/image";
-
-const items = [
-  { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Setting", url: "/setting", icon: Settings },
-];
+import SidebarCustomMenu from "./SidebarCustomMenu";
 
 export function AppSidebar() {
   return (
@@ -34,18 +27,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span className="font-normal">{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
+            <SidebarCustomMenu></SidebarCustomMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
