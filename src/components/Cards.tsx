@@ -36,16 +36,32 @@ function sortTasksByStatus(allCards: CardApiDataConverted[] | undefined) {
 
 export default function Cards() {
   const { status, data, error, isFetching } = useTasks();
+
+  function calculateNeededEmpties(arrayLength: number) {
+    const biggestNum = Math.max(todoCards.length, inProgressCards.length, reviewCards.length, completedCards.length);
+    return biggestNum - arrayLength;
+  }
   if (isFetching) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   sortTasksByStatus(data);
-
   return (
     <div className="flex flex-row gap-8">
-      <CardsSection title="To do" cardsArray={todoCards} />
-      <CardsSection title="In Progress" cardsArray={inProgressCards} />
-      <CardsSection title="Review" cardsArray={reviewCards} />
-      <CardsSection title="Completed" cardsArray={completedCards} />
+      <CardsSection title="To do" cardsArray={todoCards} emptyCardsCount={calculateNeededEmpties(todoCards.length)} />
+      <CardsSection
+        title="In Progress"
+        cardsArray={inProgressCards}
+        emptyCardsCount={calculateNeededEmpties(inProgressCards.length)}
+      />
+      <CardsSection
+        title="Review"
+        cardsArray={reviewCards}
+        emptyCardsCount={calculateNeededEmpties(reviewCards.length)}
+      />
+      <CardsSection
+        title="Completed"
+        cardsArray={completedCards}
+        emptyCardsCount={calculateNeededEmpties(completedCards.length)}
+      />
     </div>
   );
 }

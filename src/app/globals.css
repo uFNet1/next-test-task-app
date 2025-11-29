@@ -11,7 +11,7 @@
   --color-confirmation-background: rgba(210, 61, 61, 1);
   --color-foreground-secondary: rgba(18, 18, 18, 0.6);
   --color-foreground-tertiary: rgba(102, 102, 102, 1);
-  --color-foreground-quaternary: rgba(170, 170, 170, 1)
+  --color-foreground-quaternary: rgba(170, 170, 170, 1);
 
   --color-black: rgba(0, 0, 0, 1);
   --color-white: rgba(255, 255, 255, 1);
@@ -88,7 +88,7 @@
 
   --foreground-secondary: rgba(18, 18, 18, 0.6);
   --foreground-tertiary: rgba(102, 102, 102, 1);
-  --foreground-quaternary: rgba(170, 170, 170, 1)
+  --foreground-quaternary: rgba(170, 170, 170, 1);
 }
 
 @layer base {
