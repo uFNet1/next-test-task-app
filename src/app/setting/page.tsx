@@ -24,7 +24,7 @@ export default function Setting() {
               <Label className="text-xs font-semibold text-foreground-tertiary" htmlFor="name">
                 Password
               </Label>
-              <Input placeholder="Enter password" id="password" type="text" />
+              <Input minLength={4} maxLength={12} placeholder="Enter password" id="password" type="text" />
             </div>
           </div>
         </form>
