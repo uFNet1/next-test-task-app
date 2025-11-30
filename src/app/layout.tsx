@@ -3,6 +3,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import "./globals.css";
 import PageTitle from "@/components/PageTitle";
+import ProfileSidebar from "@/components/ProfileSidebar";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -22,6 +23,7 @@ export default function RootLayout({
             <PageTitle />
             <main className="flex-1">{children}</main>
           </div>
+          <ProfileSidebar />
         </SidebarProvider>
       </body>
     </html>
