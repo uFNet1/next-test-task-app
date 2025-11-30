@@ -5,7 +5,7 @@ import { Ellipsis, Clock } from "lucide-react";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { parseDate } from "@/lib/utils";
 
-export default function TaskCard({ title, description, createdAt }: CardDisplayData) {
+export default function TaskCard({ title, description, createdAt, isCompleted = false }: CardDisplayData) {
   return (
     <Card className="w-[260] h-[216] flex flex-col justify-between">
       <div className="flex flex-col gap-4">
@@ -16,7 +16,7 @@ export default function TaskCard({ title, description, createdAt }: CardDisplayD
         <CardContent className="text-foreground-secondary text-sm font-normal">{description}</CardContent>
       </div>
       <CardFooter className="flex items-center justify-between">
-        <Badge className="bg-accent font-normal">
+        <Badge className={`bg-accent font-normal ${isCompleted && "bg-[#F5F6F8] text-[#DDDDDD]"}`}>
           <Clock size={16} />
           <span>{parseDate(createdAt)}</span>
         </Badge>

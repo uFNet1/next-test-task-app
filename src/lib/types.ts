@@ -19,6 +19,7 @@ export interface CardDisplayData {
   createdAt: Date;
   title: string;
   description: string;
+  isCompleted?: boolean;
 }
 export interface SidebarMenuData {
   title: string;

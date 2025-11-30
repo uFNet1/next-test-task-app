@@ -5,10 +5,12 @@ export default function CardsSection({
   title,
   cardsArray,
   emptyCardsCount,
+  isCompleted = false,
 }: {
   title: string;
   cardsArray: CardApiDataConverted[];
   emptyCardsCount: number;
+  isCompleted?: boolean;
 }) {
   const emptyElementsArr = createEmptyCard();
 
@@ -16,7 +18,13 @@ export default function CardsSection({
     return (
       <>
         {section.map((item: CardApiDataConverted) => (
-          <TaskCard key={item.id} title={item.title} description={item.description} createdAt={item.createdAt} />
+          <TaskCard
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            createdAt={item.createdAt}
+            isCompleted={isCompleted}
+          />
         ))}
         {emptyElementsArr}
       </>

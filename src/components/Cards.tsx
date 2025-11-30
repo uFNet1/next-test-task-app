@@ -61,6 +61,7 @@ export default function Cards() {
         title="Completed"
         cardsArray={completedCards}
         emptyCardsCount={calculateNeededEmpties(completedCards.length)}
+        isCompleted={true}
       />
     </div>
   );
