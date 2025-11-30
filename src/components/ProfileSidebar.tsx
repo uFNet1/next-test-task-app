@@ -7,18 +7,25 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarHeader,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Image from "next/image";
 import { CircularProgress } from "./ui/radial-progress";
 import { Button } from "./ui/button";
+import { useEffect } from "react";
 
 const image = <Image src={"/sidebar_user_photo_large.png"} alt="App Photo" width={80} height={80} />;
 
 export default function ProfileSidebar() {
+  const { isMobile, setOpenMobile, setOpen } = useSidebar();
+  useEffect(() => {
+    setOpenMobile(false);
+  }, [isMobile]);
   const pathname = usePathname();
   if (pathname !== "/setting") return;
+  if (isMobile) return;
   return (
-    <Sidebar side="right" collapsible="none" className="ml-8 max-w-[312px] min-w-[312px]">
+    <Sidebar collapsible="none" side="right" className="max-w-[312px] min-w-[312px]">
       <SidebarHeader className="mt-12 mb-6">
         <div className="flex flex-col gap-1 px-2">
           <p className="text-black font-medium text-xl">My Profile</p>
