@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import "./globals.css";
+import PageTitle from "@/components/PageTitle";
 
 const poppins = Poppins({
   weight: ["400", "500", "600"],
@@ -19,7 +20,10 @@ export default function RootLayout({
         <SidebarProvider className="h-full">
           <div className="flex h-full">
             <AppSidebar />
-            <main className="flex-1">{children}</main>
+            <div className="flex flex-col gap-7 mt-13">
+              <PageTitle />
+              <main className="flex-1">{children}</main>
+            </div>
           </div>
         </SidebarProvider>
       </body>
