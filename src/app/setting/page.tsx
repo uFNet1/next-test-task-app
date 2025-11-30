@@ -31,7 +31,7 @@ export default function Setting() {
         <p className="text-xs text-foreground-tertiary mt-2">Your password is between 4 and 12 characters</p>
       </div>
       <div className="w-full">
-        <Button className="bg-accent text-xs font-bold px-[120px] ml-auto block mt-3.5">Save</Button>
+        <Button className="bg-accent text-xs font-bold px-[120px] ml-auto block mt-3.5 cursor-pointer">Save</Button>
       </div>
     </>
   );

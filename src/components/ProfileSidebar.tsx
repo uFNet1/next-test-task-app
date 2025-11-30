@@ -48,7 +48,7 @@ export default function ProfileSidebar() {
       </SidebarContent>
       <SidebarFooter className="mb-7">
         <div className="px-2">
-          <Button variant="destructive" className="text-xs font-bold px-[120px] mx-auto block">
+          <Button variant="destructive" className="text-xs font-bold px-[120px] mx-auto block cursor-pointer">
             Logout
           </Button>
         </div>
