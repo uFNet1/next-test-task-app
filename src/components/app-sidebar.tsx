@@ -12,7 +12,7 @@ import SidebarCustomMenu from "./SidebarCustomMenu";
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="none" className="mr-8">
+    <Sidebar collapsible="none" className="mr-8 max-w-[220px] min-w-[220px]">
       <SidebarHeader className="mt-12 mb-6">
         <SidebarMenuButton
           asChild
